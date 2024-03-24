@@ -6,7 +6,7 @@ spring:
       server:
         native:
           search-locations:
-          - file:///C:/Spring_Boot_Workspace/Configuration_Properties
+          - file:///C:/My WorkSpace/Hire_Me_Workspace/SecureMe_Configuration_Properties
   profiles:
     active:
     - native
