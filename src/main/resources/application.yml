@@ -1,6 +1,26 @@
 server:
   port: 8888
+  ssl:
+    enabled: false
+    bundle: "secureme-config"
+    enabled-protocols: TLSv1.3
 spring:
+  ssl:
+    enabled: true
+    bundle:
+      jks:
+        secureme-config:
+          key:
+            alias: "secureme-config"
+          keystore:
+            location: "classpath:secureme-config.jks"
+            password: "secureme-config"
+            type: "JKS"
+            provider: "SUN"
+          truststore:
+            location: "classpath:secureme-config.jks"
+            password: "secureme-config"
+            type: "JKS"
   cloud:
     config:
       server:
